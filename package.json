@@ -4,13 +4,17 @@
   "scripts": {
     "build": "rescript",
     "clean": "rescript clean -with-deps",
-    "start": "rescript build -w"
+    "start": "rescript build -w",
+    "watch": "nodemon --exec 'node ./lib/js/src/Demo.bs.js'"
   },
   "keywords": [
     "rescript"
   ],
   "author": "",
   "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  },
   "dependencies": {
     "rescript": "*"
   }
