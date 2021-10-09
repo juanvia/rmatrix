@@ -107,11 +107,14 @@ let appendColumn = (theMatrix: t, theVector: t): t => {
 
   let newData = []
   for i in 0 to length(theVector.data) - 1 {
+    // First, the old elements of the column...
     for j in 0 to theMatrix.cols - 1 {
       let _ = newData->push(theMatrix.data[i * theMatrix.cols + j])
     }
+    // ...and then, the newcomer element
     let _ = newData->push(theVector.data[i])
   }
-
+  // now 'newData' contains the vector elements inserted in the right places
+  
   make(theMatrix.rows, theMatrix.cols + 1, newData)
 }
